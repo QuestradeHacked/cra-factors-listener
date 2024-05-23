@@ -1,0 +1,17 @@
+environment_variables:
+  CustomerMasterDataProviderConfig__BaseUrl: "https://cmdp.svc.questrade.com"
+
+  Confluent__Kafka__Consumers__PersonConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Persons-1.0
+  Confluent__Kafka__Consumers__UserConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Users-1.0
+  Confluent__Kafka__Consumers__UserAccountConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.UserAccount-1.0
+  Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PoliticallyExposedPerson-1.0
+  Confluent__Kafka__Consumers__PersonEmploymentConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PersonEmployment-1.0
+  Confluent__Kafka__Consumers__InternationalAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.InternationalAddress-1.0
+  Confluent__Kafka__Consumers__DomesticAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.DomesticAddress-1.0
+  Confluent__Kafka__Consumers__AccountConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Account-1.0
+  Confluent__Kafka__Consumers__PersonAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PersonAddress-1.0
+
+  GooglePubSub__Publishers__CountryChanged__TopicId: system.customer-risk-assessment.country.updated-1.0
+  GooglePubSub__Publishers__PersonEmploymentChanged__TopicId: system.customer-risk-assessment.person-employment.updated-1.0
+  GooglePubSub__Publishers__PoliticallyExposedPersonChanged__TopicId: system.customer-risk-assessment.politically-exposed-person.updated-1.0
+  GooglePubSub__Publishers__AccountChanged__TopicId: system.customer-risk-assessment.account.updated-1.0

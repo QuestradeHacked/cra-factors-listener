@@ -1,0 +1,17 @@
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.csproj.AssemblyReference.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.GeneratedMSBuildEditorConfig.editorconfig
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.AssemblyInfoInputs.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.AssemblyInfo.cs
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.csproj.CoreCompileInputs.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.Cdc.deps.json
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.Cdc.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.Cdc.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.DAL.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.Domain.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.DAL.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/bin/Debug/net6.0/CRA.FactorsListener.Domain.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.csproj.CopyComplete
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/refint/CRA.FactorsListener.Cdc.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/CRA.FactorsListener.Cdc.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Cdc/obj/Debug/net6.0/ref/CRA.FactorsListener.Cdc.dll

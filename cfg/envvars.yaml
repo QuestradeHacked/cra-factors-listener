@@ -1,0 +1,197 @@
+environment_variables:
+    ASPNETCORE_ENVIRONMENT: $(ENV)
+
+    # Global log configuration
+    Logging__IncludeScopes: "true"
+    Serilog__MinimumLevel__Default: "Warning"
+
+    # Microsoft log level overrides
+    Serilog__MinimumLevel__Override__System: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.Hosting.Lifetime: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.AspNetCore: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Mvc: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Authentication: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Identity: "Warning"
+    Serilog__MinimumLevel__Override__Microsoft.AspNetCore.Session.SessionMiddleware: "Error"
+    
+    # Serilog sinks (outputs) and configuration
+    Serilog__WriteTo__0__Name: "Console"
+    Serilog__WriteTo__0__Args__formatter: "Serilog.Formatting.Json.JsonFormatter"
+
+    Serilog__Enrich__0: "FromLogContext"
+    Serilog__Enrich__1: "WithMachineName"
+    Serilog__Enrich__2: "WithThreadId"
+    Serilog__Enrich__3: "WithExceptionDetails"
+
+    FirestoreConfig__ProjectId: $(FIRESTORE_PROJECT)
+
+    CustomerMasterDataProviderConfig__Resilience__ConsecutiveExceptionsAllowedBeforeBreaking: 15
+    CustomerMasterDataProviderConfig__Resilience__DurationOfBreakInSeconds: 15
+    CustomerMasterDataProviderConfig__Resilience__RetryCount: 3
+
+    Confluent__Kafka__EnableDebug: false
+
+    Confluent__Kafka__Consumers__PersonConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Persons-1.0.$(ENV)
+    Confluent__Kafka__Consumers__PersonConsumer__GroupId: cra-listener-person-$(ENV)
+    Confluent__Kafka__Consumers__PersonConsumer__CheckName: message_consumer:cra_listener:person
+    Confluent__Kafka__Consumers__PersonConsumer__DataDogTag: message_type:cra_listener:person
+    Confluent__Kafka__Consumers__PersonConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__PersonConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__UserConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Users-1.0.$(ENV)
+    Confluent__Kafka__Consumers__UserConsumer__GroupId: cra-listener-user-$(ENV)
+    Confluent__Kafka__Consumers__UserConsumer__CheckName: message_consumer:cra_listener:user
+    Confluent__Kafka__Consumers__UserConsumer__DataDogTag: message_type:cra_listener:user
+    Confluent__Kafka__Consumers__UserConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__UserConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__UserAccountConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.UserAccount-1.0.$(ENV)
+    Confluent__Kafka__Consumers__UserAccountConsumer__GroupId: cra-listener-useraccount-$(ENV)
+    Confluent__Kafka__Consumers__UserAccountConsumer__CheckName: message_consumer:cra_listener:user_account
+    Confluent__Kafka__Consumers__UserAccountConsumer__DataDogTag: message_type:cra_listener:user_account
+    Confluent__Kafka__Consumers__UserAccountConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__UserAccountConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__PersonAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PersonAddress-1.0.$(ENV)
+    Confluent__Kafka__Consumers__PersonAddressConsumer__GroupId: cra-listener-personaddress-$(ENV)
+    Confluent__Kafka__Consumers__PersonAddressConsumer__CheckName: message_consumer:cra_listener:person_address
+    Confluent__Kafka__Consumers__PersonAddressConsumer__DataDogTag: message_type:cra_listener:person_address
+    Confluent__Kafka__Consumers__PersonAddressConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__PersonAddressConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__AccountConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.Account-1.0.$(ENV)
+    Confluent__Kafka__Consumers__AccountConsumer__GroupId: cra-listener-account-$(ENV)
+    Confluent__Kafka__Consumers__AccountConsumer__CheckName: message_consumer:cra_listener:account
+    Confluent__Kafka__Consumers__AccountConsumer__DataDogTag: message_type:cra_listener:account
+    Confluent__Kafka__Consumers__AccountConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__AccountConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.DomesticAddress-1.0.$(ENV)
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__GroupId: cra-listener-domesticaddress-$(ENV)
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__CheckName: message_consumer:cra_listener:domestic_address
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__DataDogTag: message_type:cra_listener:domestic_address
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__DomesticAddressConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.InternationalAddress-1.0.$(ENV)
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__GroupId: cra-listener-internationaladdress-$(ENV)
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__CheckName: message_consumer:cra_listener:international_address
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__DataDogTag: message_type:cra_listener:international_address
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__InternationalAddressConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PersonEmployment-1.0.$(ENV)
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__GroupId: cra-listener-personemployment-$(ENV)
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__CheckName: message_consumer:cra_listener:person_employment
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__DataDogTag: message_type:cra_listener:person_employment
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__PersonEmploymentConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__TopicId: cdc.customer-risk-assessment.crm.dbo.PoliticallyExposedPerson-1.0.$(ENV)
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__GroupId: cra-listener-politicallyexposedperson-$(ENV)
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__CheckName: message_consumer:cra_listener:politically_exposed_person
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__DataDogTag: message_type:cra_listener:politically_exposed_person
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__AutoCommit: false
+    Confluent__Kafka__Consumers__PoliticallyExposedPersonConsumer__AutoOffsetStore: false
+
+    Confluent__Kafka__DataDog__StatsNameKafkaConsumer: subscribers.kafka.consume
+    Confluent__Kafka__DataDog__EnableDebug: false
+
+    Confluent__Kafka__DR__Status: 0
+
+    Confluent__SchemaRegistryConfig__Url: https://psrc-4nyjd.us-central1.gcp.confluent.cloud
+
+    # DataDog
+    DataDog__StatsD__Host: $(DD_AGENT_HOST)
+    DataDog__StatsD__HostName: $(DD_AGENT_HOST)
+    DataDog__StatsD__Prefix: $(APP_NAME)
+
+    # PubSub
+    GooglePubSub__Publishers__AccountChanged__Enable: true
+    GooglePubSub__Publishers__AccountChanged__UseEmulator: false
+    GooglePubSub__Publishers__AccountChanged__UniqueIdentifier: factors.account-profile.publisher
+    GooglePubSub__Publishers__AccountChanged__ProjectId: $(GOOGLE_CLOUD_PROJECT_ID)
+    GooglePubSub__Publishers__AccountChanged__TopicId: system.customer-risk-assessment.account.updated-1.0.$(ENV)
+    GooglePubSub__Publishers__AccountChanged__PublisherClientCount: 10
+    GooglePubSub__Publishers__AccountChanged__ElementCountThreshold: 1
+    GooglePubSub__Publishers__AccountChanged__ByteCountThreshold: 512
+    GooglePubSub__Publishers__AccountChanged__DelayThreshold: 0.00:00:00.5
+    GooglePubSub__Publishers__AccountChanged__ShouldForwardErrors: true
+    GooglePubSub__Publishers__AccountChanged__EnableMessageOrdering: true
+    GooglePubSub__Publishers__AccountChanged__PublisherServiceDelay: 0.00:00:00.250
+    GooglePubSub__Publishers__AccountChanged__MaximumMessagePublishAttempts: 10
+    GooglePubSub__Publishers__AccountChanged__PublishFailureThresholdToConsiderDegraded: 1
+    GooglePubSub__Publishers__AccountChanged__PublishFailureThresholdToConsiderUnhealthy: 25
+    GooglePubSub__Publishers__AccountChanged__DegradedStateType: Degraded
+    GooglePubSub__Publishers__AccountChanged__UnhealthyStateType: Unhealthy
+    GooglePubSub__Publishers__AccountChanged__DegradedStateDuration: 0.00:00:05
+    GooglePubSub__Publishers__AccountChanged__UnhealthyStateDuration: 0.00:00:10
+    GooglePubSub__Publishers__AccountChanged__ShowPii: false
+    GooglePubSub__Publishers__AccountChanged__DataContentType: application/json
+
+    GooglePubSub__Publishers__CountryChanged__Enable: true
+    GooglePubSub__Publishers__CountryChanged__UseEmulator: false
+    GooglePubSub__Publishers__CountryChanged__UniqueIdentifier: factors.country-profile.publisher
+    GooglePubSub__Publishers__CountryChanged__ProjectId: $(GOOGLE_CLOUD_PROJECT_ID)
+    GooglePubSub__Publishers__CountryChanged__TopicId: system.customer-risk-assessment.country.updated-1.0.$(ENV)
+    GooglePubSub__Publishers__CountryChanged__PublisherClientCount: 10
+    GooglePubSub__Publishers__CountryChanged__ElementCountThreshold: 1
+    GooglePubSub__Publishers__CountryChanged__ByteCountThreshold: 512
+    GooglePubSub__Publishers__CountryChanged__DelayThreshold: 0.00:00:00.5
+    GooglePubSub__Publishers__CountryChanged__ShouldForwardErrors: true
+    GooglePubSub__Publishers__CountryChanged__EnableMessageOrdering: true
+    GooglePubSub__Publishers__CountryChanged__PublisherServiceDelay: 0.00:00:00.250
+    GooglePubSub__Publishers__CountryChanged__MaximumMessagePublishAttempts: 10
+    GooglePubSub__Publishers__CountryChanged__PublishFailureThresholdToConsiderDegraded: 1
+    GooglePubSub__Publishers__CountryChanged__PublishFailureThresholdToConsiderUnhealthy: 25
+    GooglePubSub__Publishers__CountryChanged__DegradedStateType: Degraded
+    GooglePubSub__Publishers__CountryChanged__UnhealthyStateType: Unhealthy
+    GooglePubSub__Publishers__CountryChanged__DegradedStateDuration: 0.00:00:05
+    GooglePubSub__Publishers__CountryChanged__UnhealthyStateDuration: 0.00:00:10
+    GooglePubSub__Publishers__CountryChanged__ShowPii: false
+    GooglePubSub__Publishers__CountryChanged__DataContentType: application/json
+
+    GooglePubSub__Publishers__PersonEmploymentChanged__Enable: true
+    GooglePubSub__Publishers__PersonEmploymentChanged__UseEmulator: false
+    GooglePubSub__Publishers__PersonEmploymentChanged__UniqueIdentifier: factors.personemployment-profile.publisher
+    GooglePubSub__Publishers__PersonEmploymentChanged__ProjectId: $(GOOGLE_CLOUD_PROJECT_ID)
+    GooglePubSub__Publishers__PersonEmploymentChanged__TopicId: system.customer-risk-assessment.person-employment.updated-1.0.$(ENV)
+    GooglePubSub__Publishers__PersonEmploymentChanged__PublisherClientCount: 10
+    GooglePubSub__Publishers__PersonEmploymentChanged__ElementCountThreshold: 1
+    GooglePubSub__Publishers__PersonEmploymentChanged__ByteCountThreshold: 512
+    GooglePubSub__Publishers__PersonEmploymentChanged__DelayThreshold: 0.00:00:00.5
+    GooglePubSub__Publishers__PersonEmploymentChanged__ShouldForwardErrors: true
+    GooglePubSub__Publishers__PersonEmploymentChanged__EnableMessageOrdering: true
+    GooglePubSub__Publishers__PersonEmploymentChanged__PublisherServiceDelay: 0.00:00:00.250
+    GooglePubSub__Publishers__PersonEmploymentChanged__MaximumMessagePublishAttempts: 10
+    GooglePubSub__Publishers__PersonEmploymentChanged__PublishFailureThresholdToConsiderDegraded: 1
+    GooglePubSub__Publishers__PersonEmploymentChanged__PublishFailureThresholdToConsiderUnhealthy: 25
+    GooglePubSub__Publishers__PersonEmploymentChanged__DegradedStateType: Degraded
+    GooglePubSub__Publishers__PersonEmploymentChanged__UnhealthyStateType: Unhealthy
+    GooglePubSub__Publishers__PersonEmploymentChanged__DegradedStateDuration: 0.00:00:05
+    GooglePubSub__Publishers__PersonEmploymentChanged__UnhealthyStateDuration: 0.00:00:10
+    GooglePubSub__Publishers__PersonEmploymentChanged__ShowPii: false
+    GooglePubSub__Publishers__PersonEmploymentChanged__DataContentType: application/json
+
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__Enable: true
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__UseEmulator: false
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__UniqueIdentifier: factors.politicallyexposedperson-profile.publisher
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__ProjectId: $(GOOGLE_CLOUD_PROJECT_ID)
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__TopicId: system.customer-risk-assessment.politically-exposed-person.updated-1.0.$(ENV)
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__PublisherClientCount: 10
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__ElementCountThreshold: 1
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__ByteCountThreshold: 512
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__DelayThreshold: 0.00:00:00.5
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__ShouldForwardErrors: true
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__EnableMessageOrdering: true
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__PublisherServiceDelay: 0.00:00:00.250
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__MaximumMessagePublishAttempts: 10
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__PublishFailureThresholdToConsiderDegraded: 1
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__PublishFailureThresholdToConsiderUnhealthy: 25
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__DegradedStateType: Degraded
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__UnhealthyStateType: Unhealthy
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__DegradedStateDuration: 0.00:00:05
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__UnhealthyStateDuration: 0.00:00:10
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__ShowPii: false
+    GooglePubSub__Publishers__PoliticallyExposedPersonChanged__DataContentType: application/json

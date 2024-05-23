@@ -1,0 +1,1 @@
+docker run --rm -ti -p 8681:8681 -e PUBSUB_PROJECT1=sample_project_emulator,account_sample_topic_emulator,country_sample_topic_emulator,personemployment_sample_topic_emulator,politicallyexposedperson_sample_topic_emulator messagebird/gcloud-pubsub-emulator:latest

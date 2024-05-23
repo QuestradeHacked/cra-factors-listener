@@ -1,0 +1,46 @@
+service_name: cra-factors-listener
+stack: dotnetcore
+owner: tmj
+
+firestore:
+  enabled: true
+  env:
+    sit:
+      name: cra-factors-fs-sit
+    uat:
+      name: cra-factors-fs-uat
+    prod:
+      name: cra-factors-fs-prod
+
+pubsubs_to_publish:
+  - system.customer-risk-assessment.account.updated-1.0
+  - system.customer-risk-assessment.country.updated-1.0
+  - system.customer-risk-assessment.person-employment.updated-1.0
+  - system.customer-risk-assessment.politically-exposed-person.updated-1.0
+
+notification_channels:
+  - digital-banking-devops
+
+notification_emails:
+  - questrade-scrumteam-tmj@questrade.com
+
+business_line:
+  name: enterprise
+  product: customers
+  domain: customer-risk-assessment
+
+release_managers:
+  users:
+    - dmohan@questrade.com
+    - igtanure@questrade.com
+    - jhasse@questrade.com
+    - lrogerio@questrade.com
+    - rgasparotto@questrade.com
+    - spotasio@questrade.com
+    - wantunes@questrade.com
+
+rbac:
+  env:
+    sit:
+      groups:
+        - questrade-scrumteam-tmj@questrade.com

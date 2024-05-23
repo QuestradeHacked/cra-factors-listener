@@ -1,0 +1,12 @@
+{
+    "type": "record",
+    "name": "Key",
+    "namespace": "cdc.customer_risk_assessment.crm.dbo.PersonAddress",
+    "fields": [
+        {
+            "name": "PersonAddressID",
+            "type": "int"
+        }
+    ],
+    "connect.name": "cdc.customer_risk_assessment.crm.dbo.PersonAddress.Key"
+}

@@ -1,0 +1,12 @@
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/bin/Debug/net6.0/CRA.FactorsListener.Domain.deps.json
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/bin/Debug/net6.0/CRA.FactorsListener.Domain.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/bin/Debug/net6.0/CRA.FactorsListener.Domain.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.csproj.AssemblyReference.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.AssemblyInfoInputs.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.AssemblyInfo.cs
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.csproj.CoreCompileInputs.cache
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/refint/CRA.FactorsListener.Domain.dll
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/CRA.FactorsListener.Domain.pdb
+/Users/015756/Documents/Projects/cra-factors-listener/src/CRA.FactorsListener.Domain/obj/Debug/net6.0/ref/CRA.FactorsListener.Domain.dll

@@ -1,0 +1,12 @@
+{
+    "type": "record",
+    "name": "Key",
+    "namespace": "cdc.customer_risk_assessment.crm.dbo.InternationalAddress",
+    "fields": [
+        {
+            "name": "InternationalAddressID",
+            "type": "int"
+        }
+    ],
+    "connect.name": "cdc.customer_risk_assessment.crm.dbo.InternationalAddress.Key"
+}

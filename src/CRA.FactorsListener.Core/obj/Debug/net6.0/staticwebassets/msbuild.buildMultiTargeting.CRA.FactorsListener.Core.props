@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/CRA.FactorsListener.Core.props" />
+</Project>

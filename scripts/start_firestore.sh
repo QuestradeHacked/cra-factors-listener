@@ -1,0 +1,1 @@
+gcloud beta emulators firestore start --host-port=localhost:6060

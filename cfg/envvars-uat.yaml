@@ -1,0 +1,7 @@
+environment_variables:
+    CustomerMasterDataProviderConfig__BaseUrl: "https://customer-master-data.uat.q3.questech.io"
+
+    Confluent__Kafka__0__BootstrapServers__0: b0-pkc-41n5j.us-east1.gcp.confluent.cloud:9092
+    Confluent__Kafka__0__BootstrapServers__1: b1-pkc-41n5j.us-east1.gcp.confluent.cloud:9092
+    Confluent__Kafka__0__BootstrapServers__2: b2-pkc-41n5j.us-east1.gcp.confluent.cloud:9092
+    Confluent__Kafka__0__BootstrapServers__3: b3-pkc-41n5j.us-east1.gcp.confluent.cloud:9092

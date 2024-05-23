@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/CRA.FactorsListener.Core.props" />
+</Project>
